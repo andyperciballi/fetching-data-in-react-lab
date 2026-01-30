@@ -1,42 +1,108 @@
-#root {
-  max-width: 1280px;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 2.5px;
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #ffe81f;
+  -webkit-text-stroke: 2px #000;
+}
+
+h2 {
+  color: #ffe81f;
+}
+
+h3 {
+  color: #007bb8;
+}
+
+strong {
+  color: #bc1e22;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.search-intro {
+  font-size: 24px;
+}
+
+.starship-list {
+  grid-template-columns: repeat(auto-fill, minmax(150px));
+}
+
+.starship-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+li,
+.starship-card {
+  padding: 16px 24px;
+  border-radius: 8px;
+  background-color: #222;
+  border: 1px solid rgb(160, 160, 160);
+  transition: transform 0.2s ease;
+}
+
+li:hover,
+.starship-card:hover {
+  transform: scale(1.01);
+  border-color: #ffe81f;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+form * {
+  margin-right: 16px;
+}
+
+input,
+button {
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  border: 1px solid rgb(160, 160, 160);
+  background-color: #333;
+  color: #eee;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-all {
+  display: block;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  cursor: pointer;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.search-meta {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 8px;
 }
